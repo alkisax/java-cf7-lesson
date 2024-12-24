@@ -2,24 +2,36 @@ package gr.aueb.cf.ch12;
 
 /**
  * java bean
- * μια κλαση είναι bean όταν έχει -private πεδια -default constructor -geteres & setters με συμβαση + serializable
+ * μια κλάση είναι bean όταν έχει -private πεδία -default constructor -getters & setters με σύμβαση + serializable
  */
 
 public class Student {
+    private static int studentsCount = 0;
+
     private int id;
     private String firstname;
     private String lastname;
+
+    static {
+        studentsCount = 0; // Εδω θα μπορούσε να υπήρχε κώδικας κανονικός
+    }
 
 
     // ftiaxtikan ola me alt+insert
     // default constructor
     public Student() {
+        studentsCount++; //SYMANTIKO
     }
     //overloaded constructor
     public Student (int id, String firstname, String lastname) {
         this.id = id;
         this.firstname = firstname;
         this.lastname = lastname;
+        studentsCount++;
+    }
+
+    public static int getStudentsCount() {
+        return studentsCount;
     }
 
     public int getId() {
@@ -46,34 +58,4 @@ public class Student {
         this.lastname = lastname;
     }
 
-    //    //default constructor
-//    public Student (){
-//        id = 0;
-//        firstname = null;
-//        lastname = null;
-//    }
-//
-//    public int getId() {
-//        return this.id;
-//    }
-//
-//    public void setId (int id) {
-//        this.id = id;
-//    }
-//
-//    public String getFirstname() {
-//        return this.firstname;
-//    }
-//
-//    public void setFirstname(String firstname) {
-//        this.firstname = firstname;
-//    }
-//
-//    public String getLastname() {
-//        return this.lastname;
-//    }
-//
-//    public void setLastname(String lastname) {
-//        this.lastname = lastname;
-//    }
 }
