@@ -10,6 +10,7 @@ public class Main {
 
         Teacher teacher = new Teacher(1, "Athanasios", "Androutsos");
         User user = new User(1, "Kostas", "Mask", "cmask", "12345", true);
+//        User User2 = new User()
         Customer customer = new Customer(1, "Andrew", "dimitrioy", "876543289", "6947733075", "Athens", "Attica", "Athens", "Patission", "76", "10434");
         Point point = new Point(0, 10);
         Order order = new Order(1, 5.5, "Meat", "ordered");
