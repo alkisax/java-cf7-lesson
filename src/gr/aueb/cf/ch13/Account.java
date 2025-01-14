@@ -120,4 +120,20 @@ public class Account {
     private boolean isSsnValid (String ssn) {
         return this.ssn.equals(ssn);
     }
+
+    /**
+     * reutrns the balance of the account
+     * @return teh Accounts balance.
+     */
+    public double getAccountBalance() {
+        System.out.println("The account balance was returned");
+        return getBalance();
+    }
+
+    /**
+     *
+     */
+    public String accountToString () {
+        return  "(" + ", " + id + ", " + iban + ", " + firstname + ", " + lastname + ", " + ssn + ", " + balance +")";
+    }
 }
