@@ -9,7 +9,6 @@ public class CodingFactorySingleton {
     private static final CodingFactorySingleton INSTANCE = new CodingFactorySingleton();
 
     /* einai private giati ftiaxno factory
-
      */
     private CodingFactorySingleton(){
     }
