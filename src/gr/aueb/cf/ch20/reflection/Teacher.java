@@ -9,6 +9,10 @@ public class Teacher {
 
     }
 
+    public Teacher(Long id) {
+        this.id = id;
+    }
+
     public Teacher(Long id, String firstname, String lastname) {
         this.id = id;
         this.firstname = firstname;
@@ -46,20 +50,5 @@ public class Teacher {
     public void saySomething(String message) {
         System.out.println(message);
     }
-
-    //gpt
-    public void printInstanceTeacher() {
-        System.out.println(this);
-    }
-
-    public static void printStaticTeacher(Teacher teacher) {
-        System.out.println(teacher);
-    }
-
-    @Override
-    public String toString() {
-        return "Teacher{id=" + id + ", firstname='" + firstname + "', lastname='" + lastname + "'}";
-    }
-
 
 }
